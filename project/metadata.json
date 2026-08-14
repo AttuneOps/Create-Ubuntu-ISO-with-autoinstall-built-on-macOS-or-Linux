@@ -1,6 +1,6 @@
 {
     "externalUuid4": "1796c78c-4bc9-4535-b508-9ca6d3a68cc9", 
-    "key": "ubuntuautomatedserverinstallation", 
-    "name": "Ubuntu Automated Server Installation", 
+    "key": "createubuntuisowithautoinstallbuiltonmacosorlinux", 
+    "name": "Create Ubuntu ISO with autoinstall built on macOS or Linux", 
     "revision": "145c6dc54454"
 }
