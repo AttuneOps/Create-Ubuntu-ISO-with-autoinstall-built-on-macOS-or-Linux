@@ -1,13 +1,13 @@
 {
     "actionOnStepFail": "stop", 
-    "archiveKey": "bootconfig", 
+    "archiveKey": "ubuntuserver2204iso", 
     "deployPath": "{workerDirectory}build-{newMachine.fqn}", 
     "enabled": true, 
-    "externalUuid4": "2ebb4552-ecf8-4457-b997-9cd3127a1c6a", 
-    "key": "deploygrubbootconfig", 
-    "name": "Deploy grub boot config", 
+    "externalUuid4": "9a1eb088-2928-4aa4-854f-5ae571fabb57", 
+    "key": "deployubuntuserver2204iso", 
+    "name": "Deploy Ubuntu Server 22.04 ISO", 
     "osCredKey": "linuxworkeruser", 
     "serverKey": "linuxworker", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileTuple", 
-    "unpack": true
+    "unpack": false
 }

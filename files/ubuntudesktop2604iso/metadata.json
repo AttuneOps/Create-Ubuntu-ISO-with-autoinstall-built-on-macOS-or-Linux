@@ -1,0 +1,11 @@
+{
+    "externalUuid4": "14528ab9-ec20-461e-81ec-5a8f59e16ae1", 
+    "fileName": "ubuntu-26.04.1-desktop-amd64.iso", 
+    "formatKey": "unknown", 
+    "key": "ubuntudesktop2604iso", 
+    "md5": "385c932aa24aa66da80ed9514d18cedc", 
+    "name": "Ubuntu Desktop 26.04 ISO", 
+    "remoteUri": "https://releases.ubuntu.com/26.04.1/ubuntu-26.04.1-desktop-amd64.iso", 
+    "size": 6482409472, 
+    "type": "com.servertribe.attune.tuples.FileArchiveLargeTuple"
+}

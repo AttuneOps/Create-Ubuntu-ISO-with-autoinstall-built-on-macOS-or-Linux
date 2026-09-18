@@ -1,0 +1,11 @@
+{
+    "externalUuid4": "e8b7a798-744d-4c8a-a23a-8fe36411fcf7", 
+    "fileName": "ubuntu-22.04.5-live-server-amd64.iso", 
+    "formatKey": "unknown", 
+    "key": "ubuntuserver2204iso", 
+    "md5": "98b851805605def2f7f835e8a41c871a", 
+    "name": "Ubuntu Server 22.04 ISO", 
+    "remoteUri": "https://releases.ubuntu.com/22.04.5/ubuntu-22.04.5-live-server-amd64.iso", 
+    "size": 2136926208, 
+    "type": "com.servertribe.attune.tuples.FileArchiveLargeTuple"
+}

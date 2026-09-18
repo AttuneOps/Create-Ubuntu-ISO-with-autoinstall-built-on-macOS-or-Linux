@@ -1,0 +1,11 @@
+{
+    "externalUuid4": "274d6214-183c-4273-9ac7-2ebd1e0d2c37", 
+    "fileName": "ubuntu-24.04.5-live-server-amd64.iso", 
+    "formatKey": "unknown", 
+    "key": "ubuntuserver2404iso", 
+    "md5": "db80c3a43f3847581e8c0b3e15067767", 
+    "name": "Ubuntu Server 24.04 ISO", 
+    "remoteUri": "https://releases.ubuntu.com/24.04.5.1/ubuntu-24.04.5-live-server-amd64.iso", 
+    "size": 4080486400, 
+    "type": "com.servertribe.attune.tuples.FileArchiveLargeTuple"
+}

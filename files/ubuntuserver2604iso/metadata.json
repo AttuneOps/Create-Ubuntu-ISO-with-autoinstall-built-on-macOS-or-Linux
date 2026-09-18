@@ -1,0 +1,11 @@
+{
+    "externalUuid4": "d48d0c20-8d6e-47c0-b738-cd59ff0150b5", 
+    "fileName": "ubuntu-26.04.1-live-server-amd64.iso", 
+    "formatKey": "unknown", 
+    "key": "ubuntuserver2604iso", 
+    "md5": "cb81232e7fb50cf009234df515306dfe", 
+    "name": "Ubuntu Server 26.04 ISO", 
+    "remoteUri": "https://releases.ubuntu.com/26.04.1/ubuntu-26.04.1-live-server-amd64.iso", 
+    "size": 2927861760, 
+    "type": "com.servertribe.attune.tuples.FileArchiveLargeTuple"
+}

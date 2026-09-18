@@ -1,4 +1,4 @@
-cd {automationWorkerBaseDir}/build-{newOsNode.fqn}
+cd {workerDirectory}/build-{newMachine.fqn}
 
 if ls | grep -q ubuntu*iso
 then

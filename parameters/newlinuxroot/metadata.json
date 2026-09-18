@@ -1,0 +1,14 @@
+{
+    "defaultValue": [
+        {
+            "sudoTo": "root", 
+            "type": "attune.parameter.default.LinOsCred", 
+            "user": null
+        }
+    ], 
+    "externalUuid4": "6f6b7b7b-eb28-40bd-8dfa-d4e33d36e655", 
+    "key": "newlinuxroot", 
+    "name": "New Linux Root", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.LinOsCred"
+}

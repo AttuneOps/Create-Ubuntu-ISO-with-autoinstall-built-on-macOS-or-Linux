@@ -1,7 +1,8 @@
 {
+    "defaultValue": [], 
     "externalUuid4": "f76fbcbd-0b09-44c5-ab19-27b9f8464d64", 
-    "key": "newosuserhashedpassword", 
-    "name": "New OS User Hashed Password", 
+    "key": "newmachineuserhashedpassword", 
+    "name": "New Machine User Hashed Password", 
     "showInPlan": true, 
     "type": "c.s.s.b.phv.LinOsCred"
 }

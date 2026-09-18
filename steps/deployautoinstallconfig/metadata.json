@@ -1,7 +1,7 @@
 {
     "actionOnStepFail": "stop", 
     "archiveKey": "autoinstallconfig", 
-    "deployPath": "{automationWorkerBaseDir}/build-{newOsNode.fqn}", 
+    "deployPath": "{workerDirectory}build-{newMachine.fqn}", 
     "enabled": true, 
     "externalUuid4": "6bd561d4-229d-4103-86bc-d86c8debad4f", 
     "key": "deployautoinstallconfig", 
@@ -11,37 +11,27 @@
     "makoParameters": [
         {
             "name": "hostname", 
-            "parameterKey": "newosnode", 
+            "parameterKey": "newmachine", 
             "parameterType": "c.s.s.b.phv.Server"
         }, 
         {
             "name": "username", 
-            "parameterKey": "newosuserhashedpassword", 
+            "parameterKey": "newmachineuserhashedpassword", 
             "parameterType": "c.s.s.b.phv.OsCred"
         }, 
         {
             "name": "hashedPassword", 
-            "parameterKey": "newosuserhashedpassword", 
+            "parameterKey": "newmachineuserhashedpassword", 
             "parameterType": "c.s.s.b.phv.OsCred"
         }, 
         {
-            "name": "gateway", 
-            "parameterKey": "newosgateway", 
-            "parameterType": "c.s.s.b.phv.Server"
-        }, 
-        {
-            "name": "dns1", 
-            "parameterKey": "newosdns1", 
-            "parameterType": "c.s.s.b.phv.Server"
-        }, 
-        {
-            "name": "dns2", 
-            "parameterKey": "newosdns2", 
-            "parameterType": "c.s.s.b.phv.Server"
+            "name": "subnet", 
+            "parameterKey": "newmachinenetwork", 
+            "parameterType": "c.s.s.b.phv.Ip4Subnet"
         }
     ], 
     "name": "Deploy autoinstall Config", 
-    "osCredKey": "automationworkeruser", 
-    "serverKey": "automationworkernode", 
+    "osCredKey": "linuxworkeruser", 
+    "serverKey": "linuxworker", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileCompiledTuple"
 }

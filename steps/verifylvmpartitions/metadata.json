@@ -5,8 +5,8 @@
     "interpreter": 1, 
     "key": "verifylvmpartitions", 
     "name": "Verify LVM Partitions", 
-    "osCredKey": "newosuserroot", 
-    "serverKey": "newosnode", 
+    "osCredKey": "newlinuxroot", 
+    "serverKey": "newmachine", 
     "successExitCode": 0, 
     "type": "com.servertribe.attune.tuples.StepSshTuple"
 }

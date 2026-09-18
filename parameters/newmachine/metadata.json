@@ -1,7 +1,8 @@
 {
+    "defaultValue": [], 
     "externalUuid4": "c6d617ba-70c8-40c6-8fe1-7fdd3c476ad8", 
-    "key": "newosnode", 
-    "name": "New OS Node", 
+    "key": "newmachine", 
+    "name": "New Machine", 
     "showInPlan": true, 
     "type": "c.s.s.b.phv.LinuxServer"
 }

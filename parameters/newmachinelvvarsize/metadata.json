@@ -1,0 +1,13 @@
+{
+    "defaultValue": [
+        {
+            "type": "attune.parameter.default.Text", 
+            "value": "30G"
+        }
+    ], 
+    "externalUuid4": "124a4f5b-bd2f-4afe-afca-2f7a8f6f8a54", 
+    "key": "newmachinelvvarsize", 
+    "name": "New Machine LV var size", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

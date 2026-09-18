@@ -29,11 +29,11 @@ network:
           - ${hostname.ip}/24
         routes:
           - to: default
-            via: ${gateway.ip}
+            via: ${subnet.gateway}
         nameservers:
           addresses:
-            - ${dns1.ip}
-            - ${dns2.ip}
+            - ${subnet.dns1}
+            - ${subnet.dns2}
 
 storage:
   layout:
