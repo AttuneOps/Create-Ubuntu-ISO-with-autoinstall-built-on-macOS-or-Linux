@@ -1,0 +1,36 @@
+{
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "9fe42f78-a7ac-4938-93d8-6153e23c4ee5", 
+    "isBlueprint": true, 
+    "key": "createubuntu2404autoinstalliso", 
+    "links": [
+        {
+            "stepKey": "cleanbuildfiles"
+        }, 
+        {
+            "stepKey": "deployubuntuserver2404iso"
+        }, 
+        {
+            "stepKey": "extractiso"
+        }, 
+        {
+            "stepKey": "buildafatefiimg"
+        }, 
+        {
+            "stepKey": "deployautoinstallconfig"
+        }, 
+        {
+            "stepKey": "deploygrubbootconfig"
+        }, 
+        {
+            "stepKey": "createiso"
+        }, 
+        {
+            "stepKey": "deletebuilddirectory"
+        }
+    ], 
+    "name": "Create Ubuntu 24.04 Auto Install ISO", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}
