@@ -1,0 +1,40 @@
+cd {workerDirectory}build-{newMachine.fqn}
+
+if uname | grep -iq "darwin"
+then
+
+    echo "is macOS"
+
+    if ! command -v mformat >/dev/null 2>&1; then
+        echo "Error: mtools is not installed." >&2
+        exit 1
+    fi
+
+    if [ ! -f boot/grub/efi.img ]; then
+        rm -f boot/grub/efi.img
+
+        dd if=/dev/zero of=boot/grub/efi.img bs=1048576 count=8
+        mformat -F -v EFI -i boot/grub/efi.img ::
+        mmd -i boot/grub/efi.img ::EFI
+        mmd -i boot/grub/efi.img ::EFI/BOOT
+        mcopy -i boot/grub/efi.img EFI/boot/bootx64.efi ::EFI/BOOT/BOOTX64.EFI
+        mcopy -i boot/grub/efi.img EFI/boot/grubx64.efi ::EFI/BOOT/grubx64.efi
+    fi
+        
+else
+    echo "not macOS"
+
+    if [ ! -f boot/grub/efi.img ]; then
+        mkdir -p boot/grub
+        dd if=/dev/zero of=boot/grub/efi.img bs=1M count=8
+        mkfs.vfat -F 32 -n EFI boot/grub/efi.img
+        mmd -i boot/grub/efi.img ::EFI
+        mmd -i boot/grub/efi.img ::EFI/BOOT
+        mcopy -i boot/grub/efi.img EFI/boot/bootx64.efi ::EFI/BOOT/BOOTX64.EFI
+        if [ -f EFI/boot/grubx64.efi ]; then
+            mcopy -i boot/grub/efi.img EFI/boot/grubx64.efi ::EFI/BOOT/grubx64.efi
+        fi
+    fi
+fi
+
+ls -ltrh boot/grub/

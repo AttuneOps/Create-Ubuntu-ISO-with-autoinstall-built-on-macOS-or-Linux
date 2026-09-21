@@ -1,4 +1,4 @@
-DIR="{workerDirectory}/build-{newMachine.fqn}"
+DIR="{workerDirectory}build-{newMachine.fqn}"
 if [ -d "${DIR}" ]
 then
     rm -rf "${DIR}" && echo "Removed ${DIR}"
@@ -6,7 +6,7 @@ else
     echo "No directory to remove."
 fi
 
-ISO="{workerDirectory}/autoinstaller_{newMachine.fqn}.iso"
+ISO="{workerDirectory}unattended_{newMachine.fqn}.iso"
 if [ -f "${ISO}" ]
 then
     rm -fv "${ISO}"

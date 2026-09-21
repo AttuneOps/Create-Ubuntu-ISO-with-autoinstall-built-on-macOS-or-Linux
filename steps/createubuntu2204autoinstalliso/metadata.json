@@ -16,6 +16,9 @@
             "stepKey": "extractiso"
         }, 
         {
+            "stepKey": "buildafatefiimg"
+        }, 
+        {
             "stepKey": "deployautoinstallconfig"
         }, 
         {

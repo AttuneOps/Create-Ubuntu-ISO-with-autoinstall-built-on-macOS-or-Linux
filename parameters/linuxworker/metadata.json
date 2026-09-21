@@ -1,8 +1,8 @@
 {
     "defaultValue": [
         {
-            "domain": null, 
-            "hostname": null, 
+            "domain": "localdomain", 
+            "hostname": "localhost", 
             "ip": "127.0.0.1", 
             "sshPort": 22, 
             "type": "attune.parameter.default.LinuxServer"

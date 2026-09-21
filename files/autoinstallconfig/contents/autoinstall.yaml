@@ -1,26 +1,17 @@
-version: 1
-
-refresh-installer:
-  update: false              # Don't update installer itself
-package_update: false        # Skip apt-get update
-package_upgrade: false       # Skip package upgrades
-source:
-  search_drivers: false      # Don't search for third-party drivers
-  id: ubuntu-server-minimal  # Use minimal installation source
-apt:
-  geoip: false               # Disable geographic mirror lookup
-  fallback: offline-install  # Continue when mirrors unreachable
-oem:
-  install: false             # Skip OEM packages
-drivers:
-  install: false             # Skip driver installation
-
-locale: en_US.UTF-8
-keyboard:
-  layout: us
-  variant: ''
-
-network:
+#cloud-config
+autoinstall:
+  version: 1
+  refresh-installer:
+    update: false
+  source:
+    id: ubuntu-server-minimal
+    search_drivers: false
+  apt:
+    geoip: false
+    fallback: offline-install
+  locale: en_US.UTF-8
+  keyboard:
+    layout: us
   network:
     version: 2
     ethernets:
@@ -34,42 +25,25 @@ network:
           addresses:
             - ${subnet.dns1}
             - ${subnet.dns2}
-
-storage:
-  layout:
-    name: lvm
-    sizing-policy: scaled
-    reset-partition: true
-
-identity:
-  hostname: ${hostname.fqn}
-  realname: ${username.user}
-  username: ${username.user}
-  password: "${hashedPassword.password}"
-
-ssh:
-  install-server: true
-  allow-pw: true
-
-packages:
-  - vim
-  - curl
-  - wget
-  - net-tools
-  - qemu-guest-agent
-  - openssh-server
-
-updates: security
-
-codecs:
-  install: false
-
-late-commands:
-  - echo '${username.user} ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/${username.user}
-  - curtin in-target --target=/target -- chmod 440 /etc/sudoers.d/${username.user}
-  - curtin in-target --target=/target -- systemctl enable qemu-guest-agent
-  - curtin in-target --target=/target -- systemctl enable ssh
-
-power-state:
-  mode: poweroff
-  
+  storage:
+    layout:
+      name: lvm
+      sizing-policy: scaled
+  identity:
+    hostname: ${hostname.fqn}
+    realname: ${username.user}
+    username: ${username.user}
+    password: "${hashedPassword.password}"
+  ssh:
+    install-server: true
+    allow-pw: true
+  packages:
+    - qemu-guest-agent
+    - openssh-server
+  updates: security
+  late-commands:
+    - echo '${username.user} ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/${username.user}
+    - curtin in-target --target=/target -- chmod 440 /etc/sudoers.d/${username.user}
+    - curtin in-target --target=/target -- systemctl enable qemu-guest-agent
+    - curtin in-target --target=/target -- systemctl enable ssh
+  shutdown: reboot

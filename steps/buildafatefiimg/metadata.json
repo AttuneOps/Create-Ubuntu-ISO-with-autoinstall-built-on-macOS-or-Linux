@@ -1,0 +1,12 @@
+{
+    "actionOnStepFail": "stop", 
+    "enabled": true, 
+    "externalUuid4": "41236fe3-3d01-4ed0-92e6-c4d222f02958", 
+    "interpreter": 1, 
+    "key": "buildafatefiimg", 
+    "name": "Build a FAT efi.img", 
+    "osCredKey": "linuxworkeruser", 
+    "serverKey": "linuxworker", 
+    "successExitCode": 0, 
+    "type": "com.servertribe.attune.tuples.StepSshTuple"
+}
