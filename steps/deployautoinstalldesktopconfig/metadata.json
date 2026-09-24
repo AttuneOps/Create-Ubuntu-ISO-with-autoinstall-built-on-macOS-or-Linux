@@ -1,10 +1,10 @@
 {
     "actionOnStepFail": "stop", 
-    "archiveKey": "autoinstallconfig", 
+    "archiveKey": "autoinstalldesktopconfig", 
     "deployPath": "{workerDirectory}build-{newMachine.fqn}", 
     "enabled": true, 
-    "externalUuid4": "6bd561d4-229d-4103-86bc-d86c8debad4f", 
-    "key": "deployautoinstallconfig", 
+    "externalUuid4": "8f4b911e-2634-4432-9bca-975601604bf9", 
+    "key": "deployautoinstalldesktopconfig", 
     "makoFileNames": [
         "autoinstall.yaml"
     ], 
@@ -30,7 +30,7 @@
             "parameterType": "c.s.s.b.phv.Ip4Subnet"
         }
     ], 
-    "name": "Deploy autoinstall Config", 
+    "name": "Deploy autoinstall Desktop Config", 
     "osCredKey": "linuxworkeruser", 
     "serverKey": "linuxworker", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileCompiledTuple"

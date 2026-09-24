@@ -2,15 +2,15 @@
     "actionOnStepFail": "stop", 
     "concurrency": 1, 
     "enabled": true, 
-    "externalUuid4": "9fe42f78-a7ac-4938-93d8-6153e23c4ee5", 
+    "externalUuid4": "4dbc8a2a-ce28-486b-99af-b884969c0dac", 
     "isBlueprint": true, 
-    "key": "createubuntu2404autoinstalliso", 
+    "key": "createubuntudesktop2604autoinstalliso", 
     "links": [
         {
             "stepKey": "cleanbuildfiles"
         }, 
         {
-            "stepKey": "deployubuntuserver2404iso"
+            "stepKey": "deployubuntudesktop2604iso"
         }, 
         {
             "stepKey": "extractiso"
@@ -19,7 +19,7 @@
             "stepKey": "buildafatefiimg"
         }, 
         {
-            "stepKey": "deployautoinstallserverconfig"
+            "stepKey": "deployautoinstalldesktopconfig"
         }, 
         {
             "stepKey": "deploygrubbootconfig"
@@ -31,6 +31,6 @@
             "stepKey": "deletebuilddirectory"
         }
     ], 
-    "name": "Create Ubuntu 24.04 Auto Install ISO", 
+    "name": "Create Ubuntu Desktop 26.04 Auto Install ISO", 
     "type": "com.servertribe.attune.tuples.StepGroupTuple"
 }

@@ -4,11 +4,12 @@ autoinstall:
   refresh-installer:
     update: false
   source:
-    id: ubuntu-server-minimal
+    id: ubuntu-desktop
     search_drivers: false
   apt:
     geoip: false
-    fallback: offline-install
+    fallback: continue-anyway
+    disable_components: []
   locale: en_US.UTF-8
   keyboard:
     layout: us
@@ -38,12 +39,20 @@ autoinstall:
     install-server: true
     allow-pw: true
   packages:
-    - qemu-guest-agent
     - openssh-server
-  updates: security
+  codecs:
+    install: false
+  drivers:
+    install: false
   late-commands:
-    - echo '${username.user} ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/${username.user}
-    - curtin in-target --target=/target -- chmod 440 /etc/sudoers.d/${username.user}
+    - curtin in-target --target=/target -- apt-get update
+    - curtin in-target --target=/target -- apt-get install -y qemu-guest-agent
     - curtin in-target --target=/target -- systemctl enable qemu-guest-agent
     - curtin in-target --target=/target -- systemctl enable ssh
+    - echo '${username.user} ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/${username.user}
+    - curtin in-target --target=/target -- chmod 440 /etc/sudoers.d/${username.user}
   shutdown: reboot
+  user-data:
+    runcmd:
+      - sleep 10
+      - shutdown -r now

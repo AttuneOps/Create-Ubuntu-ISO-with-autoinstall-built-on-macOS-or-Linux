@@ -1,0 +1,13 @@
+{
+    "actionOnStepFail": "stop", 
+    "archiveKey": "ubuntuserver2604iso", 
+    "deployPath": "{workerDirectory}build-{newMachine.fqn}", 
+    "enabled": true, 
+    "externalUuid4": "00a851ac-c7e5-42f7-b097-b8689b66b795", 
+    "key": "deployubuntuserver2604iso", 
+    "name": "Deploy Ubuntu Server 26.04 ISO", 
+    "osCredKey": "linuxworkeruser", 
+    "serverKey": "linuxworker", 
+    "type": "com.servertribe.attune.tuples.StepPushDesignFileTuple", 
+    "unpack": false
+}

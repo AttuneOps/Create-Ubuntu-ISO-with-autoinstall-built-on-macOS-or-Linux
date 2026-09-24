@@ -19,7 +19,7 @@
             "stepKey": "buildafatefiimg"
         }, 
         {
-            "stepKey": "deployautoinstallconfig"
+            "stepKey": "deployautoinstallserverconfig"
         }, 
         {
             "stepKey": "deploygrubbootconfig"
