@@ -1,13 +1,13 @@
 {
     "actionOnStepFail": "stop", 
     "archiveKey": "bootconfig", 
-    "deployPath": "{automationWorkerBaseDir}/build-{newOsNode.fqn}", 
+    "deployPath": "{workerDirectory}build-{newMachine.fqn}", 
     "enabled": true, 
     "externalUuid4": "2ebb4552-ecf8-4457-b997-9cd3127a1c6a", 
     "key": "deploygrubbootconfig", 
     "name": "Deploy grub boot config", 
-    "osCredKey": "automationworkeruser", 
-    "serverKey": "automationworkernode", 
+    "osCredKey": "linuxworkeruser", 
+    "serverKey": "linuxworker", 
     "type": "com.servertribe.attune.tuples.StepPushDesignFileTuple", 
     "unpack": true
 }

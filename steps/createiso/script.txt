@@ -1,16 +1,50 @@
-cd {automationWorkerBaseDir}/build-{newOsNode.fqn}
+cd "{workerDirectory}build-{newMachine.fqn}"
 
-# mkisofs -o {automationWorkerBaseDir}/autoinstaller-{newOsNode.fqn}.iso \
-#   -b isolinux/isolinux.bin -c isolinux/boot.cat \
-#   -no-emul-boot -boot-load-size 4 -boot-info-table -J -l -V "AI_UBUNTU" .
+if uname | grep -iq "darwin"
+then
 
-xorriso -as mkisofs \
-  -r -V "AI_UBUNTU" \
-  -o {automationWorkerBaseDir}/autoinstaller-{newOsNode.fqn}.iso \
-  -J -joliet-long \
-  -b boot/grub/i386-pc/eltorito.img \
-  -c boot.catalog \
-  -no-emul-boot \
-  -boot-load-size 4 \
-  -boot-info-table \
-  .
+    echo "is macOS"
+
+    if ! command -v xorriso >/dev/null 2>&1; then
+        echo "Error: xorriso is not installed." >&2
+        exit 1
+    fi
+
+    echo "Using $(which xorriso)"
+    
+    xorriso -as mkisofs \
+        -r -V "SCRIPT_FORGE_UBUNTU" \
+        -J -joliet-long \
+        -b boot/grub/i386-pc/eltorito.img \
+        -c boot.catalog \
+        -no-emul-boot \
+        -boot-load-size 4 \
+        -boot-info-table \
+        -o "../unattended_{newMachine.fqn}.iso" \
+        .
+        
+else
+    echo "not macOS"
+    
+    mkisofs \
+        -allow-limited-size \
+        -iso-level 4 \
+        -full-iso9660-filenames \
+        -rock \
+        -b boot/grub/i386-pc/eltorito.img \
+        -no-emul-boot \
+        -boot-load-size 4 \
+        -boot-info-table \
+        -hide boot.catalog \
+        -eltorito-alt-boot \
+        -no-emul-boot \
+        -b EFI/boot/bootx64.efi \
+        -boot-load-size 1 \
+        -udf \
+        -untranslated-filenames \
+        -disable-deep-relocation \
+        -o "../unattended_{newMachine.fqn}.iso" \
+        .
+fi
+
+xorriso -indev "../unattended_{newMachine.fqn}.iso" -report_el_torito plain

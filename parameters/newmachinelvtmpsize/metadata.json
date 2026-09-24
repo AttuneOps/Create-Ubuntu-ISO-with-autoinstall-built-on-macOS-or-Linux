@@ -1,0 +1,13 @@
+{
+    "defaultValue": [
+        {
+            "type": "attune.parameter.default.Text", 
+            "value": "10G"
+        }
+    ], 
+    "externalUuid4": "89647a9a-6a89-4621-95ed-2debfc17a88c", 
+    "key": "newmachinelvtmpsize", 
+    "name": "New Machine LV tmp size", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

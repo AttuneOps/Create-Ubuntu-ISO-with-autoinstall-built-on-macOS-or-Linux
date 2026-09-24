@@ -1,0 +1,36 @@
+{
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "4dbc8a2a-ce28-486b-99af-b884969c0dac", 
+    "isBlueprint": true, 
+    "key": "createubuntudesktop2604autoinstalliso", 
+    "links": [
+        {
+            "stepKey": "cleanbuildfiles"
+        }, 
+        {
+            "stepKey": "deployubuntudesktop2604iso"
+        }, 
+        {
+            "stepKey": "extractiso"
+        }, 
+        {
+            "stepKey": "buildafatefiimg"
+        }, 
+        {
+            "stepKey": "deployautoinstalldesktopconfig"
+        }, 
+        {
+            "stepKey": "deploygrubbootconfig"
+        }, 
+        {
+            "stepKey": "createiso"
+        }, 
+        {
+            "stepKey": "deletebuilddirectory"
+        }
+    ], 
+    "name": "Create Ubuntu Desktop 26.04 Auto Install ISO", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

@@ -1,6 +1,6 @@
-varSize={newOsLvVarSize}
-tmpSize={newOsLvTmpSize}
-homeSize={newOsLvHomeSize}
+varSize={newMachineLvVarSize}
+tmpSize={newMachineLvTmpSize}
+homeSize={newMachineLvHomeSize}
 
 vgName=$(vgs --noheadings -o vg_name | tr -d ' ')
 

@@ -1,4 +1,4 @@
-DIR="{automationWorkerBaseDir}/build-{newOsNode.fqn}"
+DIR="{workerDirectory}build-{newMachine.fqn}"
 if [ -d "${DIR}" ]
 then
     rm -rf "${DIR}" && echo "Removed ${DIR}"
@@ -6,7 +6,7 @@ else
     echo "No directory to remove."
 fi
 
-ISO="{automationWorkerBaseDir}/autoinstaller_{newOsNode.fqn}.iso"
+ISO="{workerDirectory}unattended_{newMachine.fqn}.iso"
 if [ -f "${ISO}" ]
 then
     rm -fv "${ISO}"

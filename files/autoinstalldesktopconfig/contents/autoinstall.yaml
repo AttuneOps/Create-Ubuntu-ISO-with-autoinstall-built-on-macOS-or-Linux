@@ -1,0 +1,58 @@
+#cloud-config
+autoinstall:
+  version: 1
+  refresh-installer:
+    update: false
+  source:
+    id: ubuntu-desktop
+    search_drivers: false
+  apt:
+    geoip: false
+    fallback: continue-anyway
+    disable_components: []
+  locale: en_US.UTF-8
+  keyboard:
+    layout: us
+  network:
+    version: 2
+    ethernets:
+      ens18:
+        addresses:
+          - ${hostname.ip}/24
+        routes:
+          - to: default
+            via: ${subnet.gateway}
+        nameservers:
+          addresses:
+            - ${subnet.dns1}
+            - ${subnet.dns2}
+  storage:
+    layout:
+      name: lvm
+      sizing-policy: scaled
+  identity:
+    hostname: ${hostname.fqn}
+    realname: ${username.user}
+    username: ${username.user}
+    password: "${hashedPassword.password}"
+  ssh:
+    install-server: true
+    allow-pw: true
+  packages:
+    - openssh-server
+  codecs:
+    install: false
+  drivers:
+    install: false
+  late-commands:
+    - curtin in-target --target=/target -- apt-get update
+    - curtin in-target --target=/target -- apt-get install -y qemu-guest-agent
+    - curtin in-target --target=/target -- systemctl enable qemu-guest-agent
+    - curtin in-target --target=/target -- systemctl enable ssh
+    - echo '${username.user} ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/${username.user}
+    - curtin in-target --target=/target -- chmod 440 /etc/sudoers.d/${username.user}
+  shutdown: reboot
+  user-data:
+    runcmd:
+      - sleep 10
+      - shutdown -r now

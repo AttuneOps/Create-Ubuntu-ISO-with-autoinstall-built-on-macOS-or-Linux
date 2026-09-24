@@ -1,0 +1,36 @@
+{
+    "actionOnStepFail": "stop", 
+    "concurrency": 1, 
+    "enabled": true, 
+    "externalUuid4": "ddf31d51-9c2d-4614-9b1b-eac7e515ff37", 
+    "isBlueprint": true, 
+    "key": "createubuntuserver2604autoinstalliso", 
+    "links": [
+        {
+            "stepKey": "cleanbuildfiles"
+        }, 
+        {
+            "stepKey": "deployubuntuserver2604iso"
+        }, 
+        {
+            "stepKey": "extractiso"
+        }, 
+        {
+            "stepKey": "buildafatefiimg"
+        }, 
+        {
+            "stepKey": "deployautoinstallserverconfig"
+        }, 
+        {
+            "stepKey": "deploygrubbootconfig"
+        }, 
+        {
+            "stepKey": "createiso"
+        }, 
+        {
+            "stepKey": "deletebuilddirectory"
+        }
+    ], 
+    "name": "Create Ubuntu Server 26.04 Auto Install ISO", 
+    "type": "com.servertribe.attune.tuples.StepGroupTuple"
+}

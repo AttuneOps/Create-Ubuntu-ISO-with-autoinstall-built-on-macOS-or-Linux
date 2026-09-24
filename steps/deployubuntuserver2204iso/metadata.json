@@ -1,0 +1,13 @@
+{
+    "actionOnStepFail": "stop", 
+    "archiveKey": "ubuntuserver2204iso", 
+    "deployPath": "{workerDirectory}build-{newMachine.fqn}", 
+    "enabled": true, 
+    "externalUuid4": "9a1eb088-2928-4aa4-854f-5ae571fabb57", 
+    "key": "deployubuntuserver2204iso", 
+    "name": "Deploy Ubuntu Server 22.04 ISO", 
+    "osCredKey": "linuxworkeruser", 
+    "serverKey": "linuxworker", 
+    "type": "com.servertribe.attune.tuples.StepPushDesignFileTuple", 
+    "unpack": false
+}

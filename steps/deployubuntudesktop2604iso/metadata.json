@@ -1,0 +1,13 @@
+{
+    "actionOnStepFail": "stop", 
+    "archiveKey": "ubuntudesktop2604iso", 
+    "deployPath": "{workerDirectory}build-{newMachine.fqn}", 
+    "enabled": true, 
+    "externalUuid4": "f35efa63-e890-4223-ae1c-530d6e9f5fe2", 
+    "key": "deployubuntudesktop2604iso", 
+    "name": "Deploy Ubuntu Desktop 26.04 ISO", 
+    "osCredKey": "linuxworkeruser", 
+    "serverKey": "linuxworker", 
+    "type": "com.servertribe.attune.tuples.StepPushDesignFileTuple", 
+    "unpack": false
+}

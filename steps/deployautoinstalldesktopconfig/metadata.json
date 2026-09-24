@@ -1,0 +1,37 @@
+{
+    "actionOnStepFail": "stop", 
+    "archiveKey": "autoinstalldesktopconfig", 
+    "deployPath": "{workerDirectory}build-{newMachine.fqn}", 
+    "enabled": true, 
+    "externalUuid4": "8f4b911e-2634-4432-9bca-975601604bf9", 
+    "key": "deployautoinstalldesktopconfig", 
+    "makoFileNames": [
+        "autoinstall.yaml"
+    ], 
+    "makoParameters": [
+        {
+            "name": "hostname", 
+            "parameterKey": "newmachine", 
+            "parameterType": "c.s.s.b.phv.Server"
+        }, 
+        {
+            "name": "username", 
+            "parameterKey": "newmachineuserhashedpassword", 
+            "parameterType": "c.s.s.b.phv.OsCred"
+        }, 
+        {
+            "name": "hashedPassword", 
+            "parameterKey": "newmachineuserhashedpassword", 
+            "parameterType": "c.s.s.b.phv.OsCred"
+        }, 
+        {
+            "name": "subnet", 
+            "parameterKey": "newmachinenetwork", 
+            "parameterType": "c.s.s.b.phv.Ip4Subnet"
+        }
+    ], 
+    "name": "Deploy autoinstall Desktop Config", 
+    "osCredKey": "linuxworkeruser", 
+    "serverKey": "linuxworker", 
+    "type": "com.servertribe.attune.tuples.StepPushDesignFileCompiledTuple"
+}

@@ -1,0 +1,13 @@
+{
+    "defaultValue": [
+        {
+            "type": "attune.parameter.default.Text", 
+            "value": "50G"
+        }
+    ], 
+    "externalUuid4": "f5ac7bd3-135e-4c02-bde4-9295a69768bc", 
+    "key": "newmachinelvhomesize", 
+    "name": "New Machine LV home size", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Text"
+}

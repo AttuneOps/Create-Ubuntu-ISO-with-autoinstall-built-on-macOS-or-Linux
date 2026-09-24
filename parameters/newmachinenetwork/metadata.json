@@ -1,0 +1,8 @@
+{
+    "defaultValue": [], 
+    "externalUuid4": "0df836c7-478f-4250-8184-a3a1e736b868", 
+    "key": "newmachinenetwork", 
+    "name": "New Machine Network", 
+    "showInPlan": true, 
+    "type": "c.s.s.b.phv.Ip4Subnet"
+}

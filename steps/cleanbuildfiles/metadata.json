@@ -5,8 +5,8 @@
     "interpreter": 1, 
     "key": "cleanbuildfiles", 
     "name": "Clean Build Files", 
-    "osCredKey": "automationworkeruser", 
-    "serverKey": "automationworkernode", 
+    "osCredKey": "linuxworkeruser", 
+    "serverKey": "linuxworker", 
     "successExitCode": 0, 
     "type": "com.servertribe.attune.tuples.StepSshTuple"
 }

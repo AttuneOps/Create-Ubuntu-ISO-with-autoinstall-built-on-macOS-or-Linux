@@ -1,0 +1,6 @@
+{
+    "externalUuid4": "e39c1399-3a6a-445b-b23d-a70cf0cfe607", 
+    "key": "autoinstalldesktopconfig", 
+    "name": "autoinstall desktop config", 
+    "type": "com.servertribe.attune.tuples.FileArchiveVersionedTuple"
+}
